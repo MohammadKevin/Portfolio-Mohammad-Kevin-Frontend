@@ -1,65 +1,360 @@
-import Image from "next/image";
+"use client"
+
+import { useState } from "react"
 
 export default function Home() {
+
+  const [showSkills, setShowSkills] = useState(false)
+  const [showProjects, setShowProjects] = useState(false)
+  const [showCertificates, setShowCertificates] = useState(false)
+
+  const skills = [
+    {
+      title: "Backend Development",
+      list: ["Node.js", "NestJS", "REST API", "Authentication"],
+      desc: "Building server-side applications and APIs."
+    },
+    {
+      title: "API Development",
+      list: ["RESTful API", "JWT Authentication", "API Security", "Postman Testing"],
+      desc: "Designing efficient APIs."
+    },
+    {
+      title: "Database Management",
+      list: ["PostgreSQL", "MongoDB", "Prisma ORM", "Database Design"],
+      desc: "Managing scalable databases."
+    },
+    {
+      title: "System Architecture",
+      list: ["Microservices", "Caching", "Queues", "API Gateway"],
+      desc: "Designing scalable backend systems."
+    }
+  ]
+
+  const projects = [
+    {
+      title: "E-Commerce Backend API",
+      desc: "Backend system managing products, users and orders.",
+      tech: "Node.js • NestJS • PostgreSQL • Prisma"
+    },
+    {
+      title: "Authentication API",
+      desc: "Secure authentication with JWT and role-based access.",
+      tech: "Node.js • NestJS • JWT • PostgreSQL"
+    },
+    {
+      title: "Blog API",
+      desc: "REST API for blog platform.",
+      tech: "Node.js • Express • MongoDB"
+    },
+    {
+      title: "Task Management API",
+      desc: "Backend for productivity task manager.",
+      tech: "Node.js • NestJS • PostgreSQL"
+    },
+    {
+      title: "Inventory API",
+      desc: "Warehouse inventory backend system.",
+      tech: "Node.js • NestJS • PostgreSQL"
+    }
+  ]
+
+  const certificates = [
+    {
+      title: "Future Founders League 2026",
+      desc: "Top 10 Business Model Canvas Competition",
+      year: "2026"
+    },
+    {
+      title: "Backend Development Certification",
+      desc: "Node.js & REST API Development",
+      year: "2025"
+    }
+  ]
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <>
+
+      <section id="home" className="py-20 px-4 sm:px-6 md:px-12 lg:px-[120px]">
+
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+
+          <div className="md:w-1/2">
+
+            <p className="text-xl sm:text-2xl text-[#EBF4DD] font-semibold mb-2">
+              Hello, I&apos;m 👋
+            </p>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#BBE0EF] mb-2">
+              Mohammad Kevin
+            </h1>
+
+            <h3 className="text-lg sm:text-xl font-semibold text-[#BBE0EF] mb-6">
+              Backend Developer
+            </h3>
+
+            <p className="text-base sm:text-lg text-[#EBF4DD] mb-10 max-w-xl">
+              I develop reliable backend systems and APIs for modern web applications using Node.js, NestJS and PostgreSQL.
+            </p>
+
+            <div className="flex gap-4 flex-wrap">
+
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-[#547792]/50 border-2 border-blue-400 text-[#BBE0EF] rounded-xl hover:bg-[#4988C4] hover:text-white transition"
+              >
+                View Project
+              </a>
+
+              <a
+                href="#contact"
+                className="px-6 py-3 border-2 border-blue-400 text-[#BBE0EF] rounded-xl hover:bg-[#4988C4] hover:text-white transition"
+              >
+                Contact Me
+              </a>
+
+            </div>
+
+          </div>
+
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="/foto.png"
+              alt="profile"
+              className="w-[220px] sm:w-[260px] md:w-[320px] rounded-[40px] shadow-xl"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
         </div>
-      </main>
-    </div>
-  );
+
+      </section>
+
+
+
+      <section id="skills" className="py-20 px-4 sm:px-6 md:px-12 lg:px-[120px]">
+
+        <h2 className="text-xl sm:text-2xl text-[#BBE0EF] font-semibold underline mb-14">
+          Skills
+        </h2>
+
+
+        <div className="hidden md:grid md:grid-cols-4 gap-8">
+
+          {skills.map((skill, index) => (
+
+            <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm hover:shadow-xl transition">
+
+              <img src="/skills.png" className="rounded-xl mb-6" />
+
+              <h3 className="text-lg font-semibold text-[#4988C4] mb-3">
+                {skill.title}
+              </h3>
+
+              <ul className="text-[#4B5563] mb-4 space-y-1">
+                {skill.list.map((item, i) => (<li key={i}>{item}</li>))}
+              </ul>
+
+              <p className="text-[#4988C4] text-sm">
+                {skill.desc}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+
+        <div className="grid md:hidden grid-cols-1 sm:grid-cols-2 gap-8">
+
+          {(showSkills ? skills : skills.slice(0, 2)).map((skill, index) => (
+
+            <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm">
+
+              <img src="/skills.png" className="rounded-xl mb-6" />
+
+              <h3 className="text-lg font-semibold text-[#4988C4] mb-3">
+                {skill.title}
+              </h3>
+
+              <ul className="text-[#4B5563] mb-4 space-y-1">
+                {skill.list.map((item, i) => (<li key={i}>{item}</li>))}
+              </ul>
+
+              <p className="text-[#4988C4] text-sm">
+                {skill.desc}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <div className="flex justify-center mt-10 md:hidden">
+          <button
+            onClick={() => setShowSkills(!showSkills)}
+            className="px-6 py-3 border border-blue-400 text-[#BBE0EF] rounded-lg hover:bg-blue-400 hover:text-white transition"
+          >
+            {showSkills ? "Show Less" : "See All"}
+          </button>
+        </div>
+
+      </section>
+
+
+
+      <section id="projects" className="py-20 px-4 sm:px-6 md:px-12 lg:px-[120px]">
+
+        <h2 className="text-xl sm:text-2xl text-[#BBE0EF] font-semibold underline mb-14">
+          Projects
+        </h2>
+
+
+        <div className="hidden md:grid md:grid-cols-5 gap-8">
+
+          {projects.map((project, index) => (
+
+            <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm hover:shadow-xl">
+
+              <img src="/project.png" className="rounded-xl mb-6" />
+
+              <h3 className="text-lg font-semibold text-[#4988C4] mb-3">
+                {project.title}
+              </h3>
+
+              <p className="text-[#4B5563] mb-4 text-sm">
+                {project.desc}
+              </p>
+
+              <p className="text-[#4988C4] text-sm mb-6">
+                {project.tech}
+              </p>
+
+              <a
+                href="#"
+                className="px-5 py-2 border border-blue-400 text-blue-500 rounded-lg hover:bg-blue-400 hover:text-white transition"
+              >
+                View in GitHub
+              </a>
+
+            </div>
+
+          ))}
+
+        </div>
+
+
+        <div className="grid md:hidden grid-cols-1 sm:grid-cols-2 gap-8">
+
+          {(showProjects ? projects : projects.slice(0, 2)).map((project, index) => (
+
+            <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm">
+
+              <img src="/project.png" className="rounded-xl mb-6" />
+
+              <h3 className="text-lg font-semibold text-[#4988C4] mb-3">
+                {project.title}
+              </h3>
+
+              <p className="text-[#4B5563] mb-4 text-sm">
+                {project.desc}
+              </p>
+
+              <p className="text-[#4988C4] text-sm mb-6">
+                {project.tech}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <div className="flex justify-center mt-10 md:hidden">
+          <button
+            onClick={() => setShowProjects(!showProjects)}
+            className="px-6 py-3 border border-blue-400 text-[#BBE0EF] rounded-lg hover:bg-blue-400 hover:text-white transition"
+          >
+            {showProjects ? "Show Less" : "See All"}
+          </button>
+        </div>
+
+      </section>
+
+
+
+      <section id="certificates" className="py-20 px-4 sm:px-6 md:px-12 lg:px-[120px]">
+
+        <h2 className="text-xl sm:text-2xl text-[#BBE0EF] font-semibold underline mb-14">
+          Certificates
+        </h2>
+
+
+        <div className="hidden md:grid md:grid-cols-2 gap-8">
+
+          {certificates.map((cert, index) => (
+
+            <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm">
+
+              <img src="/certificate.png" className="rounded-xl mb-6" />
+
+              <h3 className="text-lg font-semibold text-[#225686] mb-2">
+                {cert.title}
+              </h3>
+
+              <p className="text-[#4997e0] text-sm mb-2">
+                {cert.desc}
+              </p>
+
+              <p className="text-[#225686] mt-4 font-semibold">
+                {cert.year}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+
+        <div className="grid md:hidden grid-cols-1 gap-8">
+
+          {(showCertificates ? certificates : certificates.slice(0, 1)).map((cert, index) => (
+
+            <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm">
+
+              <img src="/certificate.png" className="rounded-xl mb-6" />
+
+              <h3 className="text-lg font-semibold text-[#225686] mb-2">
+                {cert.title}
+              </h3>
+
+              <p className="text-[#4997e0] text-sm mb-2">
+                {cert.desc}
+              </p>
+
+              <p className="text-[#225686] mt-4 font-semibold">
+                {cert.year}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <div className="flex justify-center mt-10 md:hidden">
+          <button
+            onClick={() => setShowCertificates(!showCertificates)}
+            className="px-6 py-3 border border-blue-400 text-[#BBE0EF] rounded-lg hover:bg-blue-400 hover:text-white transition"
+          >
+            {showCertificates ? "Show Less" : "See All"}
+          </button>
+        </div>
+
+      </section>
+
+    </>
+  )
 }
