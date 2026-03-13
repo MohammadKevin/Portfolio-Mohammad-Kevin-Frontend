@@ -158,7 +158,7 @@ export default function Home() {
 
           <div className="md:w-1/2 flex justify-center md:justify-end">
             <img
-              src="/foto.png"
+              src="/kevinImage.png"
               alt="profile"
               className="w-[220px] sm:w-[260px] md:w-[320px] rounded-[40px] shadow-xl"
             />
