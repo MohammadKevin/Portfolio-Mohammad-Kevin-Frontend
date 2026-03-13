@@ -11,66 +11,105 @@ export default function Home() {
   const skills = [
     {
       title: "Backend Development",
-      list: ["Node.js", "NestJS", "REST API", "Authentication"],
-      desc: "Building server-side applications and APIs."
+      list: [
+        "Node.js",
+        "NestJS",
+        "Express.js",
+        "REST API Development",
+        "Authentication & Authorization"
+      ],
+      desc: "Building structured and scalable backend applications using Node.js and NestJS."
     },
     {
       title: "API Development",
-      list: ["RESTful API", "JWT Authentication", "API Security", "Postman Testing"],
-      desc: "Designing efficient APIs."
+      list: [
+        "RESTful API Design",
+        "JWT Authentication",
+        "API Validation",
+        "Postman API Testing",
+        "Error Handling"
+      ],
+      desc: "Designing and implementing secure APIs for web applications."
     },
     {
       title: "Database Management",
-      list: ["PostgreSQL", "MongoDB", "Prisma ORM", "Database Design"],
-      desc: "Managing scalable databases."
+      list: [
+        "MySQL",
+        "PostgreSQL",
+        "Prisma ORM",
+        "Database Schema Design",
+        "Data Relationships"
+      ],
+      desc: "Designing and managing relational databases with efficient queries."
     },
     {
-      title: "System Architecture",
-      list: ["Microservices", "Caching", "Queues", "API Gateway"],
-      desc: "Designing scalable backend systems."
+      title: "Development Tools",
+      list: [
+        "Git & GitHub",
+        "Postman",
+        "VS Code",
+        "Prisma Studio",
+        "Railway Deployment"
+      ],
+      desc: "Using modern development tools for backend development and deployment."
     }
-  ]
+  ];
 
   const projects = [
     {
-      title: "E-Commerce Backend API",
-      desc: "Backend system managing products, users and orders.",
-      tech: "Node.js • NestJS • PostgreSQL • Prisma"
+      title: "Inventory Management API",
+      desc: "Backend system for managing warehouse inventory and stock tracking.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
     },
     {
-      title: "Authentication API",
-      desc: "Secure authentication with JWT and role-based access.",
-      tech: "Node.js • NestJS • JWT • PostgreSQL"
+      title: "Room Reservation API",
+      desc: "Backend service for managing room bookings and reservation schedules.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
     },
     {
-      title: "Blog API",
-      desc: "REST API for blog platform.",
-      tech: "Node.js • Express • MongoDB"
+      title: "Laundry Service Management API",
+      desc: "Backend system handling laundry orders, customers and service tracking.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
     },
     {
-      title: "Task Management API",
-      desc: "Backend for productivity task manager.",
-      tech: "Node.js • NestJS • PostgreSQL"
+      title: "Event Ticketing API",
+      desc: "Backend platform for ticket sales, event registration and attendee management.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
     },
     {
-      title: "Inventory API",
-      desc: "Warehouse inventory backend system.",
-      tech: "Node.js • NestJS • PostgreSQL"
+      title: "Library Management API",
+      desc: "Backend system for managing books, borrowing records and library users.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
+    },
+    {
+      title: "Student Attendance API",
+      desc: "Backend system for recording and managing student attendance data.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
+    },
+    {
+      title: "Coffee Shop Management API",
+      desc: "Backend system for managing menu items, orders and sales transactions.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
+    },
+    {
+      title: "Boarding House Management API",
+      desc: "Backend platform for managing boarding house rooms, tenants and payments.",
+      tech: "Node.js • NestJS • MySQL • Prisma"
     }
   ]
 
   const certificates = [
-    {
-      title: "Future Founders League 2026",
-      desc: "Top 10 Business Model Canvas Competition",
-      year: "2026"
-    },
-    {
-      title: "Backend Development Certification",
-      desc: "Node.js & REST API Development",
-      year: "2025"
-    }
-  ]
+  {
+    title: "Future Founders League 2026",
+    desc: "Top 10 National Business Model Canvas Competition organized by Forum Bisnis Cendekia.",
+    year: "2026"
+  },
+  {
+    title: "Introduction to Financial Literacy",
+    desc: "Dicoding certification for completing the financial literacy course.",
+    year: "2025"
+  }
+]
 
   return (
     <>
@@ -211,7 +250,7 @@ export default function Home() {
         </h2>
 
 
-        <div className="hidden md:grid md:grid-cols-5 gap-8">
+        <div className="hidden md:grid md:grid-cols-4 gap-8">
 
           {projects.map((project, index) => (
 
@@ -297,7 +336,7 @@ export default function Home() {
 
             <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm">
 
-              <img src="/certificate.png" className="rounded-xl mb-6" />
+              <img src="/certificate1.png" className="rounded-xl mb-6" />
 
               <h3 className="text-lg font-semibold text-[#225686] mb-2">
                 {cert.title}
@@ -324,7 +363,7 @@ export default function Home() {
 
             <div key={index} className="bg-[#BBE0EF] border border-blue-400 rounded-3xl p-6 shadow-sm">
 
-              <img src="/certificate.png" className="rounded-xl mb-6" />
+              <img src="/certificate2.png" className="rounded-xl mb-6" />
 
               <h3 className="text-lg font-semibold text-[#225686] mb-2">
                 {cert.title}
