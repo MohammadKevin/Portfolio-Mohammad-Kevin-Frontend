@@ -18,9 +18,9 @@ The official personal portfolio website of Mohammad Kevin Arif Rudianto, demonst
 ---
 
 ## ✨ Key Features
-- ⚡ **Comprehensive showcase of fullstack, backend, and mobile applications**: Comprehensive showcase of fullstack, backend, and mobile applications
-- ⚡ **Live contact inquiry dispatching with Nodemailer backend integration**: Live contact inquiry dispatching with Nodemailer backend integration
-- ⚡ **Fully responsive and optimized for ultra-fast Lighthouse score performance**: Fully responsive and optimized for ultra-fast Lighthouse score performance
+- Comprehensive showcase of fullstack, backend, and mobile applications
+- Live contact inquiry dispatching with Nodemailer backend integration
+- Fully responsive and optimized for ultra-fast Lighthouse score performance
 
 ---
 
